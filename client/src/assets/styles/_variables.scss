@@ -1,0 +1,102 @@
+$base-black: rgba(39, 39, 39, 1);
+$base-green: rgba(110, 235, 131, 1);
+$base-red: rgba(255, 94, 91, 1);
+$base-gray: rgba(165, 165, 165, 1);
+$base-darkener: rgba(39, 39, 39, 0.28);
+
+// Mixins
+
+// // Fonts
+@mixin font-serif {
+  font-family: "DM Serif Display", serif;
+}
+
+@mixin font-lexend {
+  font-family: "DM Serif Display", serif;
+}
+
+// // Transition
+
+@mixin animo {
+  transition: 0.3s all ease;
+}
+
+// // Flows
+
+@mixin c-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin stretch {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin maximize($width, $height) {
+  max-width: $width;
+  max-height: $height;
+}
+
+// // Elements
+
+@mixin input-std {
+  @include font-lexend;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  border: 0.1rem solid $base-green;
+  padding: 2rem 3rem;
+  color: white;
+
+  &::placeholder {
+    color: $base-gray;
+  }
+}
+
+@mixin button-std {
+  @include c-flex;
+  @include font-lexend;
+  @include stretch;
+  @include maximize(18rem, 6rem);
+  font-weight: 600;
+  background: $base-green;
+  color: black;
+  text-transform: uppercase;
+}
+
+@mixin main-title {
+  @include font-serif;
+  color: white;
+  font-size: 4.8rem;
+}
+
+@mixin main-subtitle {
+  @include font-lexend;
+  line-height: 3rem;
+  color: $base-gray;
+  font-size: 2.4rem;
+}
+
+@mixin post-title {
+  @include font-serif;
+  line-height: 4.387rem;
+  color: $base-green;
+  font-size: 3.2rem;
+}
+
+@mixin post-date {
+  @include font-serif;
+  line-height: 4rem;
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.2rem;
+}
+
+@mixin post-text {
+  @include font-lexend;
+  line-height: 2.5rem;
+  color: white;
+  font-weight: 200;
+  font-size: 2rem;
+}
