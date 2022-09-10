@@ -12,7 +12,7 @@ $base-darkener: rgba(39, 39, 39, 0.28);
 }
 
 @mixin font-lexend {
-  font-family: "DM Serif Display", serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 // // Transition
@@ -34,6 +34,30 @@ $base-darkener: rgba(39, 39, 39, 0.28);
   height: 100%;
 }
 
+@mixin abs-lt {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin abs-rt {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@mixin abs-lb {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin abs-rb {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 @mixin maximize($width, $height) {
   max-width: $width;
   max-height: $height;
@@ -43,6 +67,7 @@ $base-darkener: rgba(39, 39, 39, 0.28);
 
 @mixin input-std {
   @include font-lexend;
+  @include animo;
   line-height: 2rem;
   font-size: 1.6rem;
   border: 0.1rem solid $base-green;
@@ -52,6 +77,11 @@ $base-darkener: rgba(39, 39, 39, 0.28);
   &::placeholder {
     color: $base-gray;
   }
+
+  &:focus {
+    @include animo;
+    border: 0.3rem solid $base-green;
+  }
 }
 
 @mixin button-std {
@@ -59,23 +89,39 @@ $base-darkener: rgba(39, 39, 39, 0.28);
   @include font-lexend;
   @include stretch;
   @include maximize(18rem, 6rem);
+  cursor: pointer;
+  padding: 1.8rem 1rem;
+  font-size: 2rem;
   font-weight: 600;
   background: $base-green;
   color: black;
   text-transform: uppercase;
 }
 
-@mixin main-title {
-  @include font-serif;
-  color: white;
-  font-size: 4.8rem;
+@mixin sign-title {
+  @include font-lexend;
+  font-size: 6.4rem;
+  color: #fff;
+  transform-origin: 50% 50%;
 }
 
-@mixin main-subtitle {
+@mixin greet-title {
+  @include font-serif;
+  font-size: 6.4rem;
+  color: #fff;
+}
+
+@mixin greet-subtitle {
   @include font-lexend;
   line-height: 3rem;
   color: $base-gray;
   font-size: 2.4rem;
+}
+
+@mixin main-title {
+  @include font-serif;
+  color: white;
+  font-size: 4.8rem;
 }
 
 @mixin post-title {
