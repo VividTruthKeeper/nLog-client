@@ -31,7 +31,7 @@ const SignInput = ({
   });
 
   useEffect(() => {
-    if (type === "name") {
+    if (type === "text") {
       setInput({ ...input, valid: validateName(input.value) });
     } else if (type === "email") {
       setInput({ ...input, valid: validateEmail(input.value) });
