@@ -15,8 +15,9 @@ const SignInput = ({
   type,
   placeholder,
   errorMsg,
+  related,
   dispatchMethod,
-}: SignInputType) => {
+}: SignInputType<string>) => {
   // Inline Types
   interface inputType {
     value: string;
@@ -31,12 +32,30 @@ const SignInput = ({
   });
 
   useEffect(() => {
-    if (type === "text") {
-      setInput({ ...input, valid: validateName(input.value) });
-    } else if (type === "email") {
-      setInput({ ...input, valid: validateEmail(input.value) });
-    } else if (type === "password") {
-      setInput({ ...input, valid: validatePassword(input.value) });
+    if (!related) {
+      if (type === "text") {
+        setInput({ ...input, valid: validateName(input.value) });
+      } else if (type === "email") {
+        setInput({ ...input, valid: validateEmail(input.value) });
+      } else if (type === "password") {
+        setInput({ ...input, valid: validatePassword(input.value) });
+      }
+    } else {
+      if (related.type === "checker") {
+        if (related.state.value === input.value) {
+          setInput({ ...input, valid: true });
+        } else {
+          setInput({ ...input, valid: false });
+        }
+      } else {
+        if (type === "text") {
+          setInput({ ...input, valid: validateName(input.value) });
+        } else if (type === "email") {
+          setInput({ ...input, valid: validateEmail(input.value) });
+        } else if (type === "password") {
+          setInput({ ...input, valid: validatePassword(input.value) });
+        }
+      }
     }
   }, [
     type,
@@ -57,6 +76,9 @@ const SignInput = ({
           value={input.value}
           defaultValue={defaultValue}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            if (related?.type === "origin") {
+              related.state.setter(e.target.value);
+            }
             setInput({ ...input, value: e.target.value, showError: true });
             if (!dispatchMethod) {
               return;
