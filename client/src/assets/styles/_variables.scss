@@ -73,6 +73,7 @@ $base-darkener: rgba(39, 39, 39, 0.28);
   border: 0.1rem solid $base-green;
   padding: 2rem 3rem;
   color: white;
+  box-shadow: -0.2rem 0.2rem 0rem 0.4rem rgba(27, 27, 27, 0.3);
 
   &::placeholder {
     color: $base-gray;
@@ -80,7 +81,8 @@ $base-darkener: rgba(39, 39, 39, 0.28);
 
   &:focus {
     @include animo;
-    border: 0.3rem solid $base-green;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0rem $base-green,
+      -0.1rem -0.1rem 0.5rem 0rem $base-green;
   }
 }
 
