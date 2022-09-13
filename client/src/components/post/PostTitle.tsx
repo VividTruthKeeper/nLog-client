@@ -1,12 +1,11 @@
-import React from "react";
-
-interface PostTitleProps {
+// Types
+interface Props {
   title: string;
   email: string;
   date: string;
 }
 
-export const PostTitle = ({ title, email, date }: PostTitleProps) => {
+export const PostTitle = ({ title, email, date }: Props) => {
   return (
     <section className="post-page-title-wrapper">
       <h1 className="post-page-title">{title}</h1>

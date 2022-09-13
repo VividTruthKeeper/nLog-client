@@ -1,5 +1,3 @@
-// Modules
-
 // Components
 import { PostTitle } from "../components/post/PostTitle";
 
