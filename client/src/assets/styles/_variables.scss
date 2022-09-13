@@ -165,13 +165,30 @@ $base-darkener: rgba(39, 39, 39, 0.28);
 
   a {
     @include font-lexend;
+    @include animo;
+    position: relative;
     font-weight: 200;
     color: $base-gray;
     font-size: 2rem;
 
-    &:hover {
-      background: $base-black;
+    &::after {
       @include animo;
+      border-top: 0.1rem solid $base-green;
+      position: absolute;
+      bottom: -0.1rem;
+      left: 0;
+      content: "";
+      width: 0;
+    }
+
+    &:hover {
+      @include animo;
+      color: $base-green;
+
+      &::after {
+        @include animo;
+        width: 100%;
+      }
     }
   }
 }
