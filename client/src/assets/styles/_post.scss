@@ -1,9 +1,29 @@
+.post-page-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding: 6rem 0;
+}
+
 .post-page-text {
   @include post-page-text;
-  margin: 3.2rem 0;
-
   &::first-letter {
     font-size: 6rem;
     line-height: 2.5rem;
   }
+}
+
+.post-page-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0 1.2rem;
+}
+
+.post-page-title {
+  @include post-page-title;
+}
+
+.post-page-sub-title {
+  @include post-page-sub-title;
 }
