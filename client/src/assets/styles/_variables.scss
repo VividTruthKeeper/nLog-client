@@ -153,6 +153,8 @@ $base-darkener: rgba(39, 39, 39, 0.28);
   font-weight: 400;
   color: $base-green;
   font-size: 4rem;
+  max-width: 84.6rem;
+  width: 100%;
 }
 
 @mixin post-page-sub-title {

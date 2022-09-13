@@ -1,10 +1,11 @@
 .post-page-title {
   @include post-page-title;
-  margin-bottom: 1.2rem;
+  margin: 0 auto 1.2rem;
 }
 
 .post-page-sub-title {
   @include post-page-sub-title;
+  margin-left: 2.1rem;
 }
 
 .post-page-container {
