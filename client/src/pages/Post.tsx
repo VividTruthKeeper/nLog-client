@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { PostTitle } from '../components/PostTitle';
+import { PostTitle } from '../components/post/PostTitle';
 
-interface PostProps {
-  text: string;
-}
+export const Post = () => {
+  let text =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus magna fringilla urna. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Urna molestie at elementum eu facilisis sed odio morbi. Eget mi proin sed libero enim. Quis varius quam quisque id diam vel quam. Duis at tellus at urna condimentum mattis pellentesque. Nulla facilisi cras fermentum odio eu feugiat pretium nibh.';
 
-export const Post = ({ text }: PostProps) => {
   return (
     <div className="post-page-container">
       <PostTitle
