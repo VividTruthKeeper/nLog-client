@@ -1,0 +1,9 @@
+.post-page-text {
+  @include post-page-text;
+  margin: 3.2rem 0;
+
+  &::first-letter {
+    font-size: 6rem;
+    line-height: 2.5rem;
+  }
+}
