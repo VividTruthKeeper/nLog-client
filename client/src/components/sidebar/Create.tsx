@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-// Icons
-import createGreen from '../../assets/icons/create_green.svg';
+// Modules
+import { Link } from "react-router-dom";
 
-export const Create = () => {
+// Icons
+import createGreen from "../../assets/icons/create_green.svg";
+
+const Create = () => {
   return (
     <Link to="/sidebar" className="create-wrapper">
       <div className="create-img">
@@ -13,3 +14,5 @@ export const Create = () => {
     </Link>
   );
 };
+
+export default Create;

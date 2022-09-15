@@ -1,7 +1,8 @@
-import User from '../sidebar/User';
-import { Search } from '../sidebar/Search';
-import { Trending } from '../sidebar/Trending';
-import { Create } from '../sidebar/Create';
+// Components
+import User from "../sidebar/User";
+import Search from "../sidebar/Search";
+import Trending from "../sidebar/Trending";
+import Create from "../sidebar/Create";
 
 const SideBar = () => {
   return (

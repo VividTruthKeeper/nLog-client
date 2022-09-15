@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-// Icons
-import trendingGreen from '../../assets/icons/trending_green.svg';
+// Modules
+import { Link } from "react-router-dom";
 
-export const Trending = () => {
+// Icons
+import trendingGreen from "../../assets/icons/trending_green.svg";
+
+const Trending = () => {
   return (
     <Link to="/sidebar" className="trending-wrapper">
       <div className="trending-img">
@@ -13,3 +14,5 @@ export const Trending = () => {
     </Link>
   );
 };
+
+export default Trending;

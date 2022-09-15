@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // Icons
-import searchGreen from '../../assets/icons/search_green.svg';
+import searchGreen from "../../assets/icons/search_green.svg";
 
-export const Search = () => {
+const Search = () => {
   return (
     <Link to="/sidebar" className="search-wrapper">
       <div className="search-img">
@@ -14,3 +13,5 @@ export const Search = () => {
     </Link>
   );
 };
+
+export default Search;
