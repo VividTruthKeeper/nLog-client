@@ -6,10 +6,28 @@
   padding: 10% 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     @include animo;
     background: rgb(45, 45, 45);
+  }
+
+  &-inner {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.sidebar-top {
+  gap: 4rem;
+
+  &-inner {
+    gap: 2.5rem;
   }
 }
 
@@ -21,6 +39,7 @@
   height: 100%;
   border-radius: 50%;
   background: $base-green;
+  margin-bottom: 4rem;
 
   span {
     cursor: pointer;
@@ -29,3 +48,34 @@
     font-size: 3.2rem;
   }
 }
+
+// Search =================================
+.search-wrapper {
+  @include sidebar-element;
+  margin-bottom: 2.5rem;
+
+  .search-text {
+    @include sidebar-element-text;
+  }
+}
+// Search/// =================================
+
+// Trending =================================
+.trending-wrapper {
+  @include sidebar-element;
+
+  .trending-text {
+    @include sidebar-element-text;
+  }
+}
+// Trending/// =================================
+
+// Create =================================
+.create-wrapper {
+  @include sidebar-element;
+
+  .create-text {
+    @include sidebar-element-text;
+  }
+}
+// Create/// =================================

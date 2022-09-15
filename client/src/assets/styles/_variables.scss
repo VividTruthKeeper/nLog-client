@@ -8,11 +8,11 @@ $base-darkener: rgba(39, 39, 39, 0.28);
 
 // // Fonts
 @mixin font-serif {
-  font-family: "DM Serif Display", serif;
+  font-family: 'DM Serif Display', serif;
 }
 
 @mixin font-lexend {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 // // Transition
@@ -25,6 +25,13 @@ $base-darkener: rgba(39, 39, 39, 0.28);
 
 @mixin c-flex {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin cc-flex {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -81,8 +88,7 @@ $base-darkener: rgba(39, 39, 39, 0.28);
 
   &:focus {
     @include animo;
-    box-shadow: 0.1rem 0.1rem 0.5rem 0rem $base-green,
-      -0.1rem -0.1rem 0.5rem 0rem $base-green;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0rem $base-green, -0.1rem -0.1rem 0.5rem 0rem $base-green;
   }
 }
 
@@ -177,7 +183,7 @@ $base-darkener: rgba(39, 39, 39, 0.28);
       position: absolute;
       bottom: -0.1rem;
       left: 0;
-      content: "";
+      content: '';
       width: 0;
     }
 
@@ -198,4 +204,15 @@ $base-darkener: rgba(39, 39, 39, 0.28);
   font-weight: normal;
   color: #fff;
   font-size: 2rem;
+}
+
+@mixin sidebar-element {
+  color: #fff;
+  @include cc-flex;
+}
+
+@mixin sidebar-element-text {
+  font-size: 1.6rem;
+  @include font-lexend;
+  font-weight: 400;
 }
