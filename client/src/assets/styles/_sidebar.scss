@@ -13,20 +13,25 @@
     @include animo;
     background: rgb(45, 45, 45);
   }
+}
 
-  &-inner {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
+.sidebar-inner {
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sidebar-top {
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
 
   &-inner {
+    display: flex;
+    flex-direction: column;
     gap: 2.5rem;
   }
 }
@@ -39,7 +44,6 @@
   height: 100%;
   border-radius: 50%;
   background: $base-green;
-  margin-bottom: 4rem;
 
   span {
     cursor: pointer;
@@ -52,7 +56,6 @@
 // Search =================================
 .search-wrapper {
   @include sidebar-element;
-  margin-bottom: 2.5rem;
 
   .search-text {
     @include sidebar-element-text;
