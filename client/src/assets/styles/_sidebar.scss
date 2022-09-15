@@ -1,0 +1,31 @@
+.sidebar {
+  @include animo;
+  height: 100vh;
+  border-right: 0.1rem solid $base-green;
+  max-width: 10rem;
+  padding: 10% 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    @include animo;
+    background: rgb(45, 45, 45);
+  }
+}
+
+.user-view {
+  @include c-flex;
+  max-width: 6.6rem;
+  max-height: 6.6rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: $base-green;
+
+  span {
+    cursor: pointer;
+    @include font-lexend;
+    padding: 1rem;
+    font-size: 3.2rem;
+  }
+}
