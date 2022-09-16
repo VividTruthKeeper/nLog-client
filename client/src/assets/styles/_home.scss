@@ -1,12 +1,24 @@
 .home-wrapper {
-    display: flex;
-    gap: 5.3rem;
+  display: flex;
+  gap: 2.3rem;
+}
 
-    .home-main {
-        max-width: 88.7rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 3.3rem;
-    }
+.home-main {
+  max-width: 88.7rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.3rem;
+}
+
+.home-wrapper-inner {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0 3rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
 }

@@ -4,13 +4,16 @@ import SideBar from "../components/global/SideBar";
 const Home = () => {
   return (
     <div className="home-wrapper">
-        <SideBar />
+      <SideBar />
+      <div className="home-wrapper-inner">
+        <div className="home-head">Latest SUKA</div>
         <main className="home-main">
-            <Article />
-            <Article />
+          <Article />
+          <Article />
         </main>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;
