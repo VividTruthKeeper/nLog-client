@@ -1,0 +1,55 @@
+.article-wrapper {
+    color: #fff;
+    display: flex;
+    gap: 1.7rem;
+}
+
+.article-title {
+    @include font-serif;
+    font-weight: 400;
+    color: $base-green;
+    font-size: 3.2rem;
+}
+
+.article-text {
+    @include font-lexend;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.article-tag {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    @include font-lexend;
+    font-size: 1.3rem;
+    color: $base-green;
+    font-weight: 500;
+    border: 1px solid $base-green;
+    border-radius: 100rem;
+}
+
+.article-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3rem;
+
+    .article-date {
+        max-width: 7.3rem;
+        width: 100%;
+        @include font-lexend;
+        font-size: 3.2rem;
+        font-weight: 600;
+        text-align: right;
+        text-transform: uppercase;
+    }
+    
+    .article-author {
+        display: block;
+        transform: rotate(-90deg);
+        @include font-lexend;
+        font-weight: 1.6rem;
+        font-weight: 400;
+        color: #fff;
+    }
+}
