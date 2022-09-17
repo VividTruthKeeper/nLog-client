@@ -1,6 +1,6 @@
 "use strict";
 import { Model } from "sequelize";
-import { UserAttributes } from "../types/userTypes";
+import { UserAttributes } from "../types/user.types";
 
 module.exports = (sequelize: any, DataTypes: any) => {
   class User extends Model<UserAttributes> implements UserAttributes {

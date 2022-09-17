@@ -1,5 +1,5 @@
 // Types
-import { PostAttributes } from "../types/postTypes";
+import { PostAttributes } from "../types/post.types";
 
 export const posts: PostAttributes[] = [
   {

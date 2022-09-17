@@ -2,7 +2,7 @@ import express, { Application, NextFunction, Request, Response } from "express";
 import db from "./models";
 import { users } from "./seeders/users.seeder";
 import { posts } from "./seeders/posts.seeder";
-import { PostAttributes } from "./types/postTypes";
+import { PostAttributes } from "./types/post.types";
 
 const app: Application = express();
 

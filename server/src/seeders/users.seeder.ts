@@ -2,7 +2,7 @@
 import { v4 as uuiv4 } from "uuid";
 
 // Types
-import { UserAttributes } from "../types/userTypes";
+import { UserAttributes } from "../types/user.types";
 
 export const users: UserAttributes[] = [
   {

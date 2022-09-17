@@ -1,6 +1,6 @@
 "use strict";
 import { Model } from "sequelize";
-import { PostAttributes } from "../types/postTypes";
+import { PostAttributes } from "../types/post.types";
 
 module.exports = (sequelize: any, DataTypes: any) => {
   class Post extends Model<PostAttributes> implements PostAttributes {
