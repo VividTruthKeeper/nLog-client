@@ -1,11 +1,31 @@
 import express, { Application, NextFunction, Request, Response } from "express";
+import db from "./models";
+import { users } from "./seeders/users.seeder";
+import { posts } from "./seeders/posts.seeder";
+import { PostAttributes } from "./types/postTypes";
 
 const app: Application = express();
 
-const add = (a: number, b: number): number => a + b;
+const port = process.env.PORT || 3000;
 
-app.get("/", (req: Request, res: Response, next: NextFunction) => {
-  res.send("Hello World");
+// app.get("/", (req: Request, res: Response, next: NextFunction) => {
+//   res.send("Hello World");
+// });
+
+// const createUser = () => {
+//   db.User.create(users[0]);
+// };
+
+// createUser();
+
+// const createPost = () => {
+//   posts.map((post: PostAttributes) => {
+//     db.Post.create(post);
+//   });
+// };
+
+// createPost();
+
+db.sequelize.sync().then(() => {
+  app.listen(port, () => console.log("Server running"));
 });
-
-app.listen(5000, () => console.log("Server running"));
