@@ -1,8 +1,16 @@
-import express, { Application, NextFunction, Request, Response } from "express";
+// Modules
+import express from "express";
+
+// Types
+import { Application, NextFunction, Request, Response } from "express";
+import { PostAttributes } from "./types/post.types";
+
+// Models
 import db from "./models";
+
+// Seeders
 import { users } from "./seeders/users.seeder";
 import { posts } from "./seeders/posts.seeder";
-import { PostAttributes } from "./types/post.types";
 
 const app: Application = express();
 
@@ -12,11 +20,11 @@ const port = process.env.PORT || 3000;
 //   res.send("Hello World");
 // });
 
-// const createUser = () => {
-//   db.User.create(users[0]);
-// };
+const createUser = () => {
+  db.User.create(users[0]);
+};
 
-// createUser();
+createUser();
 
 // const createPost = () => {
 //   posts.map((post: PostAttributes) => {
