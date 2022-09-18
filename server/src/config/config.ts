@@ -1,11 +1,15 @@
-require("dotenv").config();
+// Modules
+import * as dotenv from "dotenv";
+
+// ENV init
+dotenv.config();
 
 module.exports = {
   development: {
     username: process.env.PGUSER,
     password: process.env.PGPASSWORD,
     database: process.env.PGDATABASE,
-    host: "127.0.0.1",
+    host: process.env.PGHOST,
     dialect: "postgres",
   },
   test: {
